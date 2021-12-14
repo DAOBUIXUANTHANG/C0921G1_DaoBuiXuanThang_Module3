@@ -17,3 +17,4 @@ where studentname = 'Hung' ;
 select s.StudentName ,  sub.SubName ,  m.mark
 from Student s join Mark m on s.StudentId = m.StudentId
 join subject sub on m.SubId = sub.SubId 
+order by m.mark desc , s.StudentName asc;

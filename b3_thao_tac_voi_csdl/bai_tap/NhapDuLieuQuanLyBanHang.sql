@@ -41,3 +41,15 @@ value (1,3,7);
 
 insert into OrderDetail
 value (1,4,2);
+
+-- hien thi cac thong tin oID , oDate, oPrice
+select `Order`.oID, `Order`.oDate, `Order`.`oTotalPrice`
+from `Order`;
+
+-- hien thi danh sach khach hang da mua hang, và danh sach san pham đc mua
+select c.cID , c.cName , p.pName
+from customer c join `order` o on c.cID = o.cID
+join `OrderDetail` od on od.oID = o.oID
+join Product p on p.pID = od.pID ;
+
+-- hien thi danh sach khong mua hang
