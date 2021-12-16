@@ -17,4 +17,4 @@ select * from student;
 select * , avg(ifnull(m.Mark, 0)) diem_tb
 from student s left join mark m on m.StudentId = s.StudentId
 group by s.StudentId
-order by m.Mark desc
+order by m.Mark descbo_phan

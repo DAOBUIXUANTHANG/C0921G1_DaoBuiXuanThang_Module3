@@ -93,7 +93,7 @@ value
 (11,'2021-04-25','2021-04-25',0,2,2,1),
 (12,'2021-05-25','2021-05-27',0,7,10,1);
 
-SET FOREIGN_KEY_CHECKS=0;
+
 insert	into furama.hop_dong_chi_tiet
 value
 (1,2,4,5),
@@ -105,3 +105,17 @@ value
 (7,1,2,2),
 (8,12,2,2);
 
+insert into dich_vu_di_kem values
+(1,'Karaoke','10000','giờ','tiện nghi, hiện đại'),
+(2,'Thuê xe máy','10000','chiếc','hỏng 1 xe'),
+(3,'Thuê xe đạp','20000','chiếc','tốt'),
+(4,'Buffet buổi sáng','15000','suất','đầy đủ đồ ăn, tráng miệng'),
+(5,'Buffet buổi trưa','90000','suất','đầy đủ đồ ăn, tráng miệng'),
+(6,'Buffet buổi tối','16000','suất','đầy đủ đồ ăn, tráng miệng');
+
+select * from vi_tri;
+select * from trinh_do;
+select * from bo_phan;
+select * from nhan_vien;
+select * from loai_khach;
+select * from dich_vu_di_kem;
