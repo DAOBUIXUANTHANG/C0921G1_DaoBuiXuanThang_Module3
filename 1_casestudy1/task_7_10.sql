@@ -7,7 +7,7 @@ join loai_dich_vu ldv on dv.ma_loai_dich_vu = ldv.ma_loai_dich_vu
 where dv.ma_dich_vu not in (select hd.ma_dich_vu from hop_dong where year (hd.ngay_lam_hop_dong) = 2021)
 group by dv.ten_dich_vu;
 
-/*8.	Hiển thị thông tin ho_ten khách hàng có trong hệ thống, với yêu cầu ho_ten không trùng nhau.*/
+/*8.	Hiển thị thông tin ho_ten khách hàng có trong hệ thống, với yêu cầu ho_ten không trùng nhau.*/ 
 -- C1
 select ho_ten
 from khach_hang

@@ -113,9 +113,9 @@ insert into dich_vu_di_kem values
 (5,'Buffet buổi trưa','90000','suất','đầy đủ đồ ăn, tráng miệng'),
 (6,'Buffet buổi tối','16000','suất','đầy đủ đồ ăn, tráng miệng');
 
-select * from vi_tri;
-select * from trinh_do;
-select * from bo_phan;
-select * from nhan_vien;
-select * from loai_khach;
-select * from dich_vu_di_kem;
+-- select * from vi_tri;
+-- select * from trinh_do;
+-- select * from bo_phan;
+-- select * from nhan_vien;
+-- select * from loai_khach;
+-- select * from dich_vu_di_kem;

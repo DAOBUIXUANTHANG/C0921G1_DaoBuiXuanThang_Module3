@@ -101,4 +101,3 @@ dia_chi varchar (45)
  foreign key (ma_dich_vu_di_kem) references dich_vu_di_kem(ma_dich_vu_di_kem),
  so_luong int
  );
- 
