@@ -17,6 +17,11 @@ public class UserDAO implements IUserDAO{
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
 
+    //    tìm kiếm theo country
+    private static final String RESULT_USERS_SQL = "select * from demonew.users where country like ?;";
+    // sắp xếp theo name
+    private static final String SORT_USERS_SQL = "select* from users order by `name`;";
+
     public UserDAO() {
     }
 
@@ -137,5 +142,57 @@ public class UserDAO implements IUserDAO{
             }
         }
     }
+    // pt tìm theo country
+    public List<User> searchUser(String country){
+        List<User> userList = new ArrayList<>();
+
+        Connection connection = getConnection();
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement(RESULT_USERS_SQL);
+            System.out.println(preparedStatement);
+
+            preparedStatement.setString(1, '%' + country +"%");
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String countrys = resultSet.getString("country");
+                userList.add(new User(id,name,email,country));
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return userList;
+    }
+   // pt xếp theo tên
+    public List<User> sortbyName(){
+        List<User> userList = new ArrayList<>();
+
+        Connection connection = getConnection();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SORT_USERS_SQL);
+            System.out.println(preparedStatement);
+
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String countrys = rs.getString("country");
+                userList.add(new User(id, name, email, countrys));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return userList;
+    }
+
 
 }

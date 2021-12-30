@@ -28,7 +28,7 @@
             <td><a href="/products?action=view&id=${product.id}">${product.id}</a></td>
             <td> ${product.name}</td>
             <td>${product.price}</td>
-            <td>${product.productDescription}</td>
+            <td>${product.descriptionOfProd}</td>
             <td>${product.producer}</td>
             <td><a href="/products?action=edit&id=${product.getId()}">edit</a></td>
             <td><a href="/products?action=delete&id=${product.getId()}">delete</a></td>

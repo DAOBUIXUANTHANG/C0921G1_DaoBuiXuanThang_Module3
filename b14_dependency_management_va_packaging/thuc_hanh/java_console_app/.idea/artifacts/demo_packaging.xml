@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="demo_packaging">
+    <output-path>$PROJECT_DIR$/out/artifacts/demo_packaging</output-path>
+    <root id="archive" name="java_console_app.jar">
+      <element id="module-output" name="java_console_app" />
+    </root>
+  </artifact>
+</component>

@@ -11,7 +11,18 @@
     <h2>
         <a href="/users?action=create">Add New User</a>
     </h2>
+    <h2>
+        <a href="/users?action=sort">Sort By Name</a>
+    </h2>
+    <form>
+        <input type="text" name="search" placeholder="Search By Country">
+        <input type="hidden" name="action" hidden value="search">
+        <button type="submit">Search</button>
+    </form>
+
 </center>
+
+
 <div align="center">
     <table border="1" cellpadding="5">
         <caption><h2>List of Users</h2></caption>

@@ -18,7 +18,7 @@ public class ProductServiceImpl implements ProductService{
 
 
     @Override
-    public List<Product> display() {
+    public List<Product> findAll() {
         return new ArrayList<>(productMap.values());
     }
 
@@ -29,12 +29,12 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public void update(int id, Product product) {
-
+        productMap.put(id,product);
     }
 
     @Override
     public void remove(int id) {
-
+        productMap.remove(id);
     }
 
     @Override

@@ -5,7 +5,7 @@ import model.Product;
 import java.util.List;
 
 public interface ProductService {
-    List<Product> display() ;
+    List<Product> findAll() ;
 
     void save(int id ,Product product);
 
