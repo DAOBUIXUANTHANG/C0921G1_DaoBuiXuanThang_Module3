@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Furama</title>
-    <link rel="stylesheet" href="css_bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
 </head>
 <body>
 <%-- row1 header--%>
